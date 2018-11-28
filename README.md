@@ -1,4 +1,4 @@
-# vuedemo01
+# 饿了吗项目
 
 > A Vue.js project
 
@@ -27,4 +27,12 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+```bash
+
+	#模拟饿了吗json数据
+  data.json
+  
+	src文件存放网站所有的代码
+	router路由配置位置main.js
+	
+```
