@@ -29,10 +29,10 @@ npm test
 
 ```bash
 
-	#模拟饿了吗json数据
-  data.json
+模拟饿了吗json数据
+data.json
   
-	src文件存放网站所有的代码
-	router路由配置位置main.js
+src文件存放网站所有的代码
+router路由配置位置main.js
 	
 ```
