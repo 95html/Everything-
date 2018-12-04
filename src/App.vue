@@ -2,9 +2,9 @@
   <div id="app">
 		<v-header :seller="seller"></v-header>
 			<ul class="herder">
-			<li><router-link to="/home">首页</router-link></li>
-			<li><router-link to="/new">新闻</router-link></li>
-			<li><router-link to="/show">视频</router-link></li>
+			<li><router-link to="/goods">商品</router-link></li>
+			<li><router-link to="/new">评价</router-link></li>
+			<li><router-link to="/show">商家</router-link></li>
 			</ul>
 <br>
 <hr>

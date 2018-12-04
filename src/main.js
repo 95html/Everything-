@@ -11,18 +11,18 @@ Vue.use(VueRouter);
 
 //1.创建组件
 
-import Home from './components/Home.vue';
+import Goods from './components/goods/Goods.vue';
 import New from './components/New.vue';
 import Show from './components/Show.vue';
 import Content from './components/Content.vue';
 
 //2.配置路由
 const routes = [
-	{path:'/home',component:Home},
+	{path:'/goods',component:Goods},
 	{path:'/new',component:New},
 	{path:'/show',component:Show},
 	{path:'/content/:aid',component:Content},
-	{path:'*',redirect:'/home'}  /*默认跳转路由*/ 
+	{path:'*',redirect:'/goods'}  /*默认跳转路由*/ 
 ]
 
 //3.实例化
