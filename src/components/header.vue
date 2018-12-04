@@ -33,9 +33,21 @@
 	<div v-show="detailShow" class="detail">
 		<div class="detail-wrapper clearfix">
 			<div class="detail-mian">
+				<div>
 				<h2 class="name">{{seller.data.name}}</h2>
 				<p class="pingf">评分{{seller.data.score}}分</p>
-			</div>
+				</div>
+				<div class="title_main">
+					<div class="line"></div>
+						<div class="text_main">优惠信息</div>
+						<div class="line"></div>
+					</div>
+					<div class="title_main">
+						<div class="line"></div>
+							<div class="text_main">商家公告</div>
+							<div class="line"></div>
+						</div>
+				</div>
 		</div>
 		<div class="detail-close" @click="showClose">
 			<i>+</i>
@@ -228,5 +240,21 @@
 		margin: -64px auto 0 auto;
 		clear: both;
 		font-size: 32px;
+	}
+	.title_main {
+		display: flex;
+		width: 80%;
+		margin: 28px auto 24px auto;
+	}
+	.line {
+		flex: 1;
+		position: relative;
+		top: -6px;
+		border-bottom: 1px solid rgba(255,255,255,0.2);
+	}
+	.text_main {
+		padding: 0 12px;
+		font-weight: 700;
+		font-size: 14px;
 	}
 </style>
