@@ -30,6 +30,7 @@
 	<div class="background">
 		<img :src="seller.data.avatar" width="100%" height="100%" />
 	</div>
+	<transition name="fade">
 	<div v-show="detailShow" class="detail">
 		<div class="detail-wrapper clearfix">
 			<div class="detail-mian">
@@ -42,10 +43,18 @@
 						<div class="text_main">优惠信息</div>
 						<div class="line"></div>
 					</div>
+						<ul class="supports">
+							<li class="support-item" v-for="(item,i) in seller.data.supports">
+								<span>{{seller.data.supports[i].description}}</span>
+							</li>
+						</ul>
 					<div class="title_main">
 						<div class="line"></div>
 							<div class="text_main">商家公告</div>
 							<div class="line"></div>
+						</div>
+						<div class="bulletin">
+							<p class="content-bu">{{seller.data.bulletin}}</p>
 						</div>
 				</div>
 		</div>
@@ -53,6 +62,7 @@
 			<i>+</i>
 		</div>
 	</div>
+	</transition>
 	</div>
 </template>
 <script>
@@ -212,8 +222,15 @@
 		width: 100%;
 		height: 100%;
 		overflow: auto;
-		background: rgba(7,17,27,0.8);
+		background: rgba(7,17,27,0.9);
+		
 	}
+	.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 	.detail-wrapper{
 		min-height: 100%;
 		width: 100%;
@@ -234,7 +251,9 @@
 		font-size: 16px;
 	}
 	.detail-close {
-		position: relative;
+		position:fixed;
+		bottom: 32px;
+		left: 45%;
 		width: 32px;
 		height: 32px;
 		margin: -64px auto 0 auto;
@@ -256,5 +275,23 @@
 		padding: 0 12px;
 		font-weight: 700;
 		font-size: 14px;
+	}
+	.supports {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.support-item {
+		padding: 0 12px;
+		margin-bottom: 12px;
+		font-size:12px;
+	}
+	.bulletin {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.content-bu {
+		padding: 0 12px;
+		line-height: 24px;
+		font-size: 12px;
 	}
 </style>
