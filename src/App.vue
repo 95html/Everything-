@@ -36,7 +36,7 @@
 		},
 		components:{
 			'v-header':Header
-		}
+		} 
   }
 
 
