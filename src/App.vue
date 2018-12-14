@@ -26,7 +26,6 @@
 			this.$http.get('/api/seller').then((res)=>{
 				// console.log(res);
 				if(res){
-					
 					this.seller =res.data;
 					console.log(this.seller);
 				}
